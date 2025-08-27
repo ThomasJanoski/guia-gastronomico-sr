@@ -342,6 +342,23 @@
                 text-align: center;
             }
         }
+
+        /* Ajustes específicos para cards de hospedagem */
+        .hotel-card {
+            min-height: 650px;
+            height: auto;
+        }
+
+        .hotel-card .card-body {
+            padding: 1.8rem; /* Aumenta um pouco o padding interno */
+        }
+
+        /* Para manter a proporção em dispositivos móveis */
+        @media (max-width: 768px) {
+            .hotel-card {
+                min-height: 700px;
+            }
+        }
     </style>
 </head>
 <body>
