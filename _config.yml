@@ -1,0 +1,15 @@
+# Configuração do Jekyll para GitHub Pages
+title: Guia Gastronômico - São Roque
+description: Guia gastronômico e de hospedagem para oficiais em São Roque
+baseurl: ""
+url: "https://seuusuario.github.io"
+theme: minima
+
+# Configurações do Sass
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Configurações de build
+source: docs
+destination: _site
