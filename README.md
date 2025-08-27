@@ -18,7 +18,7 @@ Este projeto é um guia digital desenvolvido para auxiliar oficiais em visita à
 - JavaScript (para interatividade)
 - Font Awesome (para ícones)
 - Google Maps (incorporado)
-- 
+  
 ## Observações
 
 - As distâncias informadas são aproximadas por rota de carro
