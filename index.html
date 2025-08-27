@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Gastronômico e de Hospedagem - São Roque</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="assets/GuiaSaoRoqueIcon.png" type="image/x-icon">
+    <link rel="icon" href="assets/GuiaSaoRoqueIcon.png" type="image/png">
     <style>
         :root {
             --primary: #2c3e50;
@@ -387,6 +387,9 @@
                 <button class="filter-btn" data-filter="lanchonete"><i class="fas fa-hamburger"></i> Lanchonete</button>
                 <button class="filter-btn" data-filter="churrascaria"><i class="fas fa-drumstick-bite"></i> Churrascaria</button>
                 <button class="filter-btn" data-filter="gourmet"><i class="fas fa-wine-glass-alt"></i> Gourmet</button>
+                <button class="filter-btn" data-filter="brasileira"><i class="fas fa-utensils"></i> Brasileira</button>
+                <button class="filter-btn" data-filter="pastel"><i class="fas fa-bread-slice"></i> Pastel</button>
+                <button class="filter-btn" data-filter="crepe"><i class="fas fa-pancakes"></i> Crepe</button>
             </div>
             
             <div class="restaurant-grid">
@@ -481,25 +484,117 @@
                 </div>
 
                 <!-- Vale do Vinho -->
-<div class="restaurant-card" data-category="brasileira caseira">
-    <div class="card-header">
-        <h2><i class="fas fa-utensils"></i> Vale do Vinho</h2>
-        <span class="restaurant-type">Comida Caseira</span>
-    </div>
-    <div class="card-body">
-        <p>Desfrute da autêntica cozinha italiana em um ambiente acolhedor com toque brasileiro.</p>
-        <div class="distance-info">
-            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 4,2km (8min)</p>
-            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,8km (12min)</p>
-            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Centro:</span> 5,5km (9min)</p>
-        </div>
-    </div>
-    <div class="card-footer">
-         <a href="https://drive.google.com/file/d/1TQGjGvC1SBl5OKX-ym4K4a0RY_aOMAEe/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-utensils"></i>Cardápio</a>
-        <a href="https://drive.google.com/file/d/1ZAEWqU1PrjjaoZEID5SZp6wgM0MeAO7y/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-wine-bottle"></i>Vinhos</a>
-        <a href="https://drive.google.com/file/d/1tLhRGVyPc7GhifayM4ZvrjXsVO6eJdUO/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-pizza-slice"></i>Pizzas</a>
-    </div>
-</div>
+                <div class="restaurant-card" data-category="brasileira caseira">
+                    <div class="card-header">
+                        <h2><i class="fas fa-utensils"></i> Vale do Vinho</h2>
+                        <span class="restaurant-type">Comida Caseira</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Desfrute da autêntica cozinha italiana em um ambiente acolhedor com toque brasileiro.</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 4,2km (8min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,8km (12min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Centro:</span> 5,5km (9min)</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                         <a href="https://drive.google.com/file/d/1TQGjGvC1SBl5OKX-ym4K4a0RY_aOMAEe/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-utensils"></i>Cardápio</a>
+                        <a href="https://drive.google.com/file/d/1ZAEWqU1PrjjaoZEID5SZp6wgM0MeAO7y/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-wine-bottle"></i>Vinhos</a>
+                        <a href="https://drive.google.com/file/d/1tLhRGVyPc7GhifayM4ZvrjXsVO6eJdUO/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-pizza-slice"></i>Pizzas</a>
+                    </div>
+                </div>
+                
+                <!-- Pasteleiro -->
+                <div class="restaurant-card" data-category="lanchonete pastel">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bread-slice"></i> Pasteleiro</h2>
+                        <span class="restaurant-type">Pastelaria</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Estabelecimento especializado em pastéis, oferecendo variedade de recheios salgados e doces em massa fresca e crocante.</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,8km (5min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,3km (16min)</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                    </div>
+                </div>
+                
+                <!-- Don Crepe -->
+                <div class="restaurant-card" data-category="lanchonete crepe">
+                    <div class="card-header">
+                        <h2><i class="fas fa-pancakes"></i> Don Crepe</h2>
+                        <span class="restaurant-type">Creperia</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Especializado em crepes doces e salgados, com variedade de recheios e opções para todos os gostos.</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,1km (6min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,9km (17min)</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                    </div>
+                </div>
+                
+                <!-- Bolinhas -->
+                <div class="restaurant-card" data-category="brasileira churrascaria">
+                    <div class="card-header">
+                        <h2><i class="fas fa-utensils"></i> Bolinhas Grill Restaurante</h2>
+                        <span class="restaurant-type">Brasileira & Churrasco</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Restaurante tradicional de São Roque com buffet self-service por quilo, oferecendo churrasco e variedade de pratos da culinária brasileira e internacional. Funciona de segunda a sábado das 11h às 14h.:cite[3]</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,5km (4min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,1km (15min)</p>
+                        </div>
+                        <p><strong>Destaque:</strong> Famosa feijoada servida em versões tradicional e magra, com diversas guarnições.:cite[1]</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://www.bolinha.com.br/cardapio.html" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                    </div>
+                </div>
+                
+                <!-- Campestre -->
+                <div class="restaurant-card" data-category="churrascaria brasileira">
+                    <div class="card-header">
+                        <h2><i class="fas fa-drumstick-bite"></i> Campestre Restaurante e Churrascaria</h2>
+                        <span class="restaurant-type">Churrascaria</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Churrascaria com buffet self-service por quilo, especializada em carnes assadas e pratos da culinária brasileira. Funciona de terça a domingo das 11h às 15h.:cite[5]</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,2km (6min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 8,0km (18min)</p>
+                        </div>
+                        <p><strong>Destaque:</strong> Carnes suculentas, feijoada e serviço de marmitex para entrega.:cite[5]</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                    </div>
+                </div>
+                
+                <!-- Fornalha Rústica -->
+                <div class="restaurant-card" data-category="italiano pizzaria">
+                    <div class="card-header">
+                        <h2><i class="fas fa-fire"></i> Fornalha Rústica</h2>
+                        <span class="restaurant-type">Pizzaria & Italiana</span>
+                    </div>
+                    <div class="card-body">
+                        <p>Pizzaria especializada em pizzas assadas em forno a lenha, com massa rústica e ingredientes de qualidade. Também oferece pratos da culinária italiana.</p>
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,5km (7min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 8,3km (19min)</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                    </div>
+                </div>
             </div>
         </div>
         
