@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,20 +17,20 @@
             --success: #27ae60;
             --hotel: #9b59b6;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
         }
-        
+
         header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
@@ -39,7 +40,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -50,32 +51,32 @@
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
             opacity: 0.1;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             position: relative;
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
             position: relative;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .tabs {
             display: flex;
             justify-content: center;
             margin-bottom: 2rem;
             border-bottom: 2px solid #ddd;
         }
-        
+
         .tab-btn {
             padding: 12px 24px;
             background: none;
@@ -87,11 +88,11 @@
             position: relative;
             transition: all 0.3s;
         }
-        
+
         .tab-btn.active {
             color: var(--primary);
         }
-        
+
         .tab-btn.active::after {
             content: '';
             position: absolute;
@@ -101,15 +102,15 @@
             height: 3px;
             background-color: var(--primary);
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
         }
-        
+
         .filters {
             display: flex;
             justify-content: center;
@@ -117,7 +118,7 @@
             gap: 10px;
             margin-bottom: 2rem;
         }
-        
+
         .filter-btn {
             padding: 8px 16px;
             background-color: white;
@@ -129,21 +130,24 @@
             align-items: center;
             gap: 5px;
         }
-        
-        .filter-btn:hover, .filter-btn.active {
+
+        .filter-btn:hover,
+        .filter-btn.active {
             background-color: var(--accent);
             color: white;
             border-color: var(--accent);
         }
-        
-        .restaurant-grid, .hotel-grid {
+
+        .restaurant-grid,
+        .hotel-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
             margin-bottom: 3rem;
         }
-        
-        .restaurant-card, .hotel-card {
+
+        .restaurant-card,
+        .hotel-card {
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
@@ -152,22 +156,23 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .restaurant-card:hover, .hotel-card:hover {
+
+        .restaurant-card:hover,
+        .hotel-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .card-header {
             padding: 1.5rem;
             background-color: var(--primary);
             color: white;
             position: relative;
         }
-        
+
         .hotel-card .card-header {
             background-color: var(--hotel);
         }
-        
+
         .card-header::after {
             content: '';
             position: absolute;
@@ -177,16 +182,16 @@
             height: 4px;
             background: linear-gradient(to right, var(--secondary), var(--accent));
         }
-        
+
         .hotel-card .card-header::after {
             background: linear-gradient(to right, var(--hotel), #8e44ad);
         }
-        
+
         .card-body {
             padding: 1.5rem;
             flex-grow: 1;
         }
-        
+
         .card-footer {
             padding: 1rem 1.5rem;
             background-color: #f9f9f9;
@@ -194,8 +199,9 @@
             justify-content: space-between;
             align-items: center;
         }
-        
-        .restaurant-type, .hotel-type {
+
+        .restaurant-type,
+        .hotel-type {
             display: inline-block;
             padding: 4px 10px;
             border-radius: 20px;
@@ -204,11 +210,11 @@
             color: white;
             margin-bottom: 10px;
         }
-        
+
         .hotel-type {
             background-color: var(--hotel);
         }
-        
+
         .distance-info {
             margin: 15px 0;
             padding: 10px;
@@ -216,7 +222,7 @@
             border-radius: 5px;
             border-left: 4px solid var(--accent);
         }
-        
+
         .hotel-info {
             margin: 15px 0;
             padding: 10px;
@@ -224,36 +230,38 @@
             border-radius: 5px;
             border-left: 4px solid var(--hotel);
         }
-        
-        .distance-label, .hotel-label {
+
+        .distance-label,
+        .hotel-label {
             font-weight: bold;
             color: var(--dark);
             display: flex;
             align-items: center;
             gap: 5px;
         }
-        
+
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
         }
-        
-        .pricing-table th, .pricing-table td {
+
+        .pricing-table th,
+        .pricing-table td {
             padding: 10px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
-        
+
         .pricing-table th {
             background-color: #f8f9fa;
             font-weight: 600;
         }
-        
+
         .pricing-table tr:last-child td {
             border-bottom: none;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -265,19 +273,19 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
-        
+
         .hotel-btn {
             background-color: var(--hotel);
         }
-        
+
         .btn:hover {
             background-color: var(--primary);
         }
-        
+
         .hotel-btn:hover {
             background-color: #8e44ad;
         }
-        
+
         .no-menu {
             color: #888;
             font-style: italic;
@@ -285,7 +293,7 @@
             align-items: center;
             gap: 5px;
         }
-        
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -293,20 +301,20 @@
             color: white;
             margin-top: 2rem;
         }
-        
+
         .map-container {
             margin-top: 2rem;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .map-container iframe {
             width: 100%;
             height: 300px;
             border: none;
         }
-        
+
         .intro-text {
             text-align: center;
             margin-bottom: 2rem;
@@ -314,30 +322,32 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .feature-list {
             margin: 15px 0;
             padding-left: 20px;
         }
-        
+
         .feature-list li {
             margin-bottom: 8px;
         }
-        
+
         @media (max-width: 768px) {
-            .restaurant-grid, .hotel-grid {
+
+            .restaurant-grid,
+            .hotel-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
-            
+
             .tabs {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .tab-btn {
                 width: 100%;
                 text-align: center;
@@ -351,7 +361,8 @@
         }
 
         .hotel-card .card-body {
-            padding: 1.8rem; /* Aumenta um pouco o padding interno */
+            padding: 1.8rem;
+            /* Aumenta um pouco o padding interno */
         }
 
         /* Para manter a proporção em dispositivos móveis */
@@ -362,36 +373,39 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1><i class="fas fa-utensils"></i> Guia de São Roque</h1>
         <p class="subtitle">Gastronomia e hospedagem para oficiais em visita à cidade</p>
     </header>
-    
+
     <div class="container">
         <div class="tabs">
             <button class="tab-btn active" data-tab="gastronomia"><i class="fas fa-utensils"></i> Gastronomia</button>
             <button class="tab-btn" data-tab="hospedagem"><i class="fas fa-hotel"></i> Hospedagem</button>
         </div>
-        
+
         <!-- ABA DE GASTRONOMIA -->
         <div class="tab-content active" id="gastronomia">
             <div class="intro-text">
-                <p>Sugestões de Hospedagem e Gastronomia para os Membros da Visita de Inspeção do DTCEA-SRO em SET/2025</p>
+                <p>Sugestões de Hospedagem e Gastronomia para os Membros da Visita de Inspeção do DTCEA-SRO em SET/2025
+                </p>
             </div>
-            
+
             <div class="filters">
                 <button class="filter-btn active" data-filter="all"><i class="fas fa-star"></i> Todos</button>
                 <button class="filter-btn" data-filter="italiano"><i class="fas fa-pizza-slice"></i> Italiano</button>
                 <button class="filter-btn" data-filter="pizzaria"><i class="fas fa-cheese"></i> Pizzaria</button>
                 <button class="filter-btn" data-filter="lanchonete"><i class="fas fa-hamburger"></i> Lanchonete</button>
-                <button class="filter-btn" data-filter="churrascaria"><i class="fas fa-drumstick-bite"></i> Churrascaria</button>
+                <button class="filter-btn" data-filter="churrascaria"><i class="fas fa-drumstick-bite"></i>
+                    Churrascaria</button>
                 <button class="filter-btn" data-filter="gourmet"><i class="fas fa-wine-glass-alt"></i> Gourmet</button>
                 <button class="filter-btn" data-filter="brasileira"><i class="fas fa-utensils"></i> Brasileira</button>
                 <button class="filter-btn" data-filter="pastel"><i class="fas fa-bread-slice"></i> Pastel</button>
                 <button class="filter-btn" data-filter="crepe"><i class="fas fa-pancakes"></i> Crepe</button>
             </div>
-            
+
             <div class="restaurant-grid">
                 <!-- Obará Lanches -->
                 <div class="restaurant-card" data-category="lanchonete">
@@ -400,17 +414,21 @@
                         <span class="restaurant-type">Lanchonete</span>
                     </div>
                     <div class="card-body">
-                        <p>Um point tradicional de São Roque para quem busca lanches saborosos e bem servidos, especialmente hambúrgueres.</p>
+                        <p>Um point tradicional de São Roque para quem busca lanches saborosos e bem servidos,
+                            especialmente hambúrgueres.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 550m (2min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 6,2km (14min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 550m (2min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 6,2km (14min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://www.obaragrill.com/" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                        <a href="https://www.obaragrill.com/" class="btn" target="_blank"><i class="fas fa-book"></i>
+                            Ver Cardápio</a>
                     </div>
                 </div>
-                
+
                 <!-- Portalba Pizzaria -->
                 <div class="restaurant-card" data-category="pizzaria">
                     <div class="card-header">
@@ -418,17 +436,21 @@
                         <span class="restaurant-type">Pizzaria</span>
                     </div>
                     <div class="card-body">
-                        <p>Uma pizzaria clássica e muito conhecida na cidade, famosa por suas pizzas no estilo italianinha.</p>
+                        <p>Uma pizzaria clássica e muito conhecida na cidade, famosa por suas pizzas no estilo
+                            italianinha.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,1km (4min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 6,8km (16min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 1,1km (4min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 6,8km (16min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://portalbapizzaria.com.br/img/cardapio/Cardapio-Port.pdf" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                        <a href="https://portalbapizzaria.com.br/img/cardapio/Cardapio-Port.pdf" class="btn"
+                            target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
                     </div>
                 </div>
-                
+
                 <!-- Villa Don Patto -->
                 <div class="restaurant-card" data-category="italiano gourmet">
                     <div class="card-header">
@@ -436,17 +458,21 @@
                         <span class="restaurant-type">Italiano Gourmet</span>
                     </div>
                     <div class="card-body">
-                        <p>Um dos restaurantes italianos mais premiados e conceituados não apenas de São Roque, mas da região.</p>
+                        <p>Um dos restaurantes italianos mais premiados e conceituados não apenas de São Roque, mas da
+                            região.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,3km (6min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 8,0km (18min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 2,3km (6min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 8,0km (18min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://www.viladonpatto.com.br/cardapios/?root=true" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                        <a href="https://www.viladonpatto.com.br/cardapios/?root=true" class="btn" target="_blank"><i
+                                class="fas fa-book"></i> Ver Cardápio</a>
                     </div>
                 </div>
-                
+
                 <!-- Quinta do Olivardo -->
                 <div class="restaurant-card" data-category="gourmet">
                     <div class="card-header">
@@ -454,17 +480,21 @@
                         <span class="restaurant-type">Vinícola & Gourmet</span>
                     </div>
                     <div class="card-body">
-                        <p>Localizada em uma vinícola, oferece gastronomia de alto nível harmonizada com os vinhos produzidos no local.</p>
+                        <p>Localizada em uma vinícola, oferece gastronomia de alto nível harmonizada com os vinhos
+                            produzidos no local.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 4,5km (10min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 10,5km (20min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 4,5km (10min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 10,5km (20min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://quintadoolivardo.com.br/saoroque/cardapio/" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                        <a href="https://quintadoolivardo.com.br/saoroque/cardapio/" class="btn" target="_blank"><i
+                                class="fas fa-book"></i> Ver Cardápio</a>
                     </div>
                 </div>
-                
+
                 <!-- Tropeiros do Sul -->
                 <div class="restaurant-card" data-category="churrascaria">
                     <div class="card-header">
@@ -472,14 +502,18 @@
                         <span class="restaurant-type">Churrascaria</span>
                     </div>
                     <div class="card-body">
-                        <p>Excelente opção para os amantes de carnes. Oferece um rodízio tradicional com variedade de cortes.</p>
+                        <p>Excelente opção para os amantes de carnes. Oferece um rodízio tradicional com variedade de
+                            cortes.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,7km (5min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,5km (17min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 1,7km (5min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 7,5km (17min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível
+                            online</span>
                     </div>
                 </div>
 
@@ -492,18 +526,24 @@
                     <div class="card-body">
                         <p>Desfrute da autêntica cozinha italiana em um ambiente acolhedor com toque brasileiro.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 4,2km (8min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,8km (12min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Centro:</span> 5,5km (9min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 4,2km (8min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 7,8km (12min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Centro:</span>
+                                5,5km (9min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                         <a href="https://drive.google.com/file/d/1TQGjGvC1SBl5OKX-ym4K4a0RY_aOMAEe/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-utensils"></i>Cardápio</a>
-                        <a href="https://drive.google.com/file/d/1ZAEWqU1PrjjaoZEID5SZp6wgM0MeAO7y/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-wine-bottle"></i>Vinhos</a>
-                        <a href="https://drive.google.com/file/d/1tLhRGVyPc7GhifayM4ZvrjXsVO6eJdUO/view?usp=sharing" class="btn" target="_blank"><i class="fas fa-pizza-slice"></i>Pizzas</a>
+                        <a href="https://drive.google.com/file/d/1TQGjGvC1SBl5OKX-ym4K4a0RY_aOMAEe/view?usp=sharing"
+                            class="btn" target="_blank"><i class="fas fa-utensils"></i>Cardápio</a>
+                        <a href="https://drive.google.com/file/d/1ZAEWqU1PrjjaoZEID5SZp6wgM0MeAO7y/view?usp=sharing"
+                            class="btn" target="_blank"><i class="fas fa-wine-bottle"></i>Vinhos</a>
+                        <a href="https://drive.google.com/file/d/1tLhRGVyPc7GhifayM4ZvrjXsVO6eJdUO/view?usp=sharing"
+                            class="btn" target="_blank"><i class="fas fa-pizza-slice"></i>Pizzas</a>
                     </div>
                 </div>
-                
+
                 <!-- Pasteleiro -->
                 <div class="restaurant-card" data-category="lanchonete pastel">
                     <div class="card-header">
@@ -511,17 +551,21 @@
                         <span class="restaurant-type">Pastelaria</span>
                     </div>
                     <div class="card-body">
-                        <p>Estabelecimento especializado em pastéis, oferecendo variedade de recheios salgados e doces em massa fresca e crocante.</p>
+                        <p>Estabelecimento especializado em pastéis, oferecendo variedade de recheios salgados e doces
+                            em massa fresca e crocante.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,8km (5min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,3km (16min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 1,8km (5min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 7,3km (16min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível
+                            online</span>
                     </div>
                 </div>
-                
+
                 <!-- Don Crepe -->
                 <div class="restaurant-card" data-category="lanchonete crepe">
                     <div class="card-header">
@@ -529,17 +573,21 @@
                         <span class="restaurant-type">Creperia</span>
                     </div>
                     <div class="card-body">
-                        <p>Especializado em crepes doces e salgados, com variedade de recheios e opções para todos os gostos.</p>
+                        <p>Especializado em crepes doces e salgados, com variedade de recheios e opções para todos os
+                            gostos.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,1km (6min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,9km (17min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 2,1km (6min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 7,9km (17min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível
+                            online</span>
                     </div>
                 </div>
-                
+
                 <!-- Bolinhas -->
                 <div class="restaurant-card" data-category="brasileira churrascaria">
                     <div class="card-header">
@@ -547,18 +595,24 @@
                         <span class="restaurant-type">Brasileira & Churrasco</span>
                     </div>
                     <div class="card-body">
-                        <p>Restaurante tradicional de São Roque com buffet self-service por quilo, oferecendo churrasco e variedade de pratos da culinária brasileira e internacional. Funciona de segunda a sábado das 11h às 14h.:cite[3]</p>
+                        <p>Restaurante tradicional de São Roque com buffet self-service por quilo, oferecendo churrasco
+                            e variedade de pratos da culinária brasileira e internacional. Funciona de segunda a sábado
+                            das 11h às 14h.:cite[3]</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 1,5km (4min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 7,1km (15min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 1,5km (4min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 7,1km (15min)</p>
                         </div>
-                        <p><strong>Destaque:</strong> Famosa feijoada servida em versões tradicional e magra, com diversas guarnições.:cite[1]</p>
+                        <p><strong>Destaque:</strong> Famosa feijoada servida em versões tradicional e magra, com
+                            diversas guarnições.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://www.bolinha.com.br/cardapio.html" class="btn" target="_blank"><i class="fas fa-book"></i> Ver Cardápio</a>
+                        <a href="https://www.bolinha.com.br/cardapio.html" class="btn" target="_blank"><i
+                                class="fas fa-book"></i> Ver Cardápio</a>
                     </div>
                 </div>
-                
+
                 <!-- Campestre -->
                 <div class="restaurant-card" data-category="churrascaria brasileira">
                     <div class="card-header">
@@ -566,18 +620,23 @@
                         <span class="restaurant-type">Churrascaria</span>
                     </div>
                     <div class="card-body">
-                        <p>Churrascaria com buffet self-service por quilo, especializada em carnes assadas e pratos da culinária brasileira. Funciona de terça a domingo das 11h às 15h.:cite[5]</p>
+                        <p>Churrascaria com buffet self-service por quilo, especializada em carnes assadas e pratos da
+                            culinária brasileira. Funciona de terça a domingo das 11h às 15h.:cite[5]</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,2km (6min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 8,0km (18min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 2,2km (6min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 8,0km (18min)</p>
                         </div>
-                        <p><strong>Destaque:</strong> Carnes suculentas, feijoada e serviço de marmitex para entrega.:cite[5]</p>
+                        <p><strong>Destaque:</strong> Carnes suculentas, feijoada e serviço de marmitex para entrega.
+                        </p>
                     </div>
                     <div class="card-footer">
-                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível
+                            online</span>
                     </div>
                 </div>
-                
+
                 <!-- Fornalha Rústica -->
                 <div class="restaurant-card" data-category="italiano pizzaria">
                     <div class="card-header">
@@ -585,100 +644,114 @@
                         <span class="restaurant-type">Pizzaria & Italiana</span>
                     </div>
                     <div class="card-body">
-                        <p>Pizzaria especializada em pizzas assadas em forno a lenha, com massa rústica e ingredientes de qualidade. Também oferece pratos da culinária italiana.</p>
+                        <p>Pizzaria especializada em pizzas assadas em forno a lenha, com massa rústica e ingredientes
+                            de qualidade. Também oferece pratos da culinária italiana.</p>
                         <div class="distance-info">
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos Dumont:</span> 2,5km (7min)</p>
-                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do Destacamento:</span> 8,3km (19min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Da Vila Santos
+                                    Dumont:</span> 2,5km (7min)</p>
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Do
+                                    Destacamento:</span> 8,3km (19min)</p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível online</span>
+                        <span class="no-menu"><i class="fas fa-exclamation-circle"></i> Cardápio não disponível
+                            online</span>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- ABA DE HOSPEDAGEM -->
         <div class="tab-content" id="hospedagem">
             <div class="intro-text">
-                <p>Encontre as melhores opções de hospedagem em São Roque. Confira tarifas, comodidades e informações para reservas.</p>
+                <p>Encontre as melhores opções de hospedagem em São Roque. Confira tarifas, comodidades e informações
+                    para reservas.</p>
             </div>
-            
+
             <div class="hotel-grid">
-               <!-- São Roque Park Hotel -->
-<div class="hotel-card">
-    <div class="card-header">
-        <h2><i class="fas fa-hotel"></i> São Roque Park Hotel</h2>
-        <span class="hotel-type">Hotel Tradicional desde 1973</span>
-    </div>
-    <div class="card-body">
-        <p>O mais tradicional hotel da cidade, referência em hospitalidade na região há mais de 50 anos. Conforto, qualidade e preços especiais em localização privilegiada no coração da cidade.</p>
-        
-        <div class="distance-info">
-            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Endereço:</span> Avenida Antônino Dias Bastos, 318 - Centro, São Roque - SP</p>
-            <p><span class="distance-label"><i class="fas fa-phone"></i> Telefone:</span> +55 (11) 4712-6533</p>
-            <p><span class="distance-label"><i class="fas fa-envelope"></i> E-mail:</span> contato@srparkhotel.com.br</p>
-            <p><span class="distance-label"><i class="fas fa-envelope"></i> Reservas:</span> reservas@srparkhotel.com.br</p>
-        </div>
-        
-        <div class="hotel-info">
-            <p><span class="hotel-label"><i class="fas fa-star"></i> Comodidades Inclusas:</span></p>
-            <ul class="feature-list">
-                <li>Estacionamento gratuito</li>
-                <li>Localização privilegiada no centro</li>
-                <li>Recepção 24 horas</li>
-                <li>Bar da piscina</li>
-                <li>Piscina</li>
-                <li>Wi-Fi gratuito</li>
-                <li>Copa do Bebê (espaço exclusivo)</li>
-                <li>Espaço Fitness</li>
-                <li>Serviço de quarto 24h</li>
-            </ul>
-        </div>
-        
-        <div class="hotel-info">
-            <p><span class="hotel-label"><i class="fas fa-utensils"></i> Experiência Gastronômica:</span></p>
-            
-            <h3>Café da manhã</h3>
-            <p>Servido diariamente das 06h às 09h em sistema de rodízio, com mais de 25 itens frescos preparados no dia.</p>
-            
-            <h3>Jantar com meia pensão</h3>
-            <p>De segunda a sábado, servido das 18h às 21h, com opções variadas à la carte.</p>
-            
-            <h3>Bar à beira da piscina</h3>
-            <p>Pratos nacionais e internacionais, porções e drinks preparados na hora.</p>
-            
-            <h3>Opções 24 horas</h3>
-            <p>Snacks, salgadinhos, bolachas, cookies, sorvetes, refrigerantes, águas e cervejas mediante solicitação.</p>
-        </div>
-        
-        <div class="hotel-info">
-            <p><span class="hotel-label"><i class="fas fa-bed"></i> Acomodações:</span></p>
-            <p>82 acomodações completas distribuídas em três categorias:</p>
-            <ul class="feature-list">
-                <li>Executive</li>
-                <li>Standard</li>
-                <li>Girassol</li>
-            </ul>
-            <p>Clima ameno de montanha com estrutura acolhedora para diferentes perfis de viajantes.</p>
-        </div>
-        
-        <div class="hotel-info">
-            <p><span class="hotel-label"><i class="fas fa-info-circle"></i> Destaques:</span></p>
-            <ul class="feature-list">
-                <li>Tradição desde 1973</li>
-                <li>Localização privilegiada no centro da cidade</li>
-                <li>Experiência gastronômica completa</li>
-                <li>Espaço familiar com Copa do Bebê</li>
-                <li>Ideal para viagens de negócios e lazer</li>
-            </ul>
-        </div>
-    </div>
-    <div class="card-footer">
-          <a href="https://api.whatsapp.com/send?phone=551147126533" class="btn hotel-btn" target="_blank"><i class="fab fa-whatsapp"></i> Reservar por WhatsApp</a>
-    </div>
-</div>
-                
+                <!-- São Roque Park Hotel -->
+                <div class="hotel-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-hotel"></i> São Roque Park Hotel</h2>
+                        <span class="hotel-type">Hotel Tradicional desde 1973</span>
+                    </div>
+                    <div class="card-body">
+                        <p>O mais tradicional hotel da cidade, referência em hospitalidade na região há mais de 50 anos.
+                            Conforto, qualidade e preços especiais em localização privilegiada no coração da cidade.</p>
+
+                        <div class="distance-info">
+                            <p><span class="distance-label"><i class="fas fa-map-marker-alt"></i> Endereço:</span>
+                                Avenida Antônino Dias Bastos, 318 - Centro, São Roque - SP</p>
+                            <p><span class="distance-label"><i class="fas fa-phone"></i> Telefone:</span> +55 (11)
+                                4712-6533</p>
+                            <p><span class="distance-label"><i class="fas fa-envelope"></i> E-mail:</span>
+                                contato@srparkhotel.com.br</p>
+                            <p><span class="distance-label"><i class="fas fa-envelope"></i> Reservas:</span>
+                                reservas@srparkhotel.com.br</p>
+                        </div>
+
+                        <div class="hotel-info">
+                            <p><span class="hotel-label"><i class="fas fa-star"></i> Comodidades Inclusas:</span></p>
+                            <ul class="feature-list">
+                                <li>Estacionamento gratuito</li>
+                                <li>Localização privilegiada no centro</li>
+                                <li>Recepção 24 horas</li>
+                                <li>Bar da piscina</li>
+                                <li>Piscina</li>
+                                <li>Wi-Fi gratuito</li>
+                                <li>Copa do Bebê (espaço exclusivo)</li>
+                                <li>Espaço Fitness</li>
+                                <li>Serviço de quarto 24h</li>
+                            </ul>
+                        </div>
+
+                        <div class="hotel-info">
+                            <p><span class="hotel-label"><i class="fas fa-utensils"></i> Experiência
+                                    Gastronômica:</span></p>
+
+                            <h3>Café da manhã</h3>
+                            <p>Servido diariamente das 06h às 09h em sistema de rodízio, com mais de 25 itens frescos
+                                preparados no dia.</p>
+
+                            <h3>Jantar com meia pensão</h3>
+                            <p>De segunda a sábado, servido das 18h às 21h, com opções variadas à la carte.</p>
+
+                            <h3>Bar à beira da piscina</h3>
+                            <p>Pratos nacionais e internacionais, porções e drinks preparados na hora.</p>
+
+                            <h3>Opções 24 horas</h3>
+                            <p>Snacks, salgadinhos, bolachas, cookies, sorvetes, refrigerantes, águas e cervejas
+                                mediante solicitação.</p>
+                        </div>
+
+                        <div class="hotel-info">
+                            <p><span class="hotel-label"><i class="fas fa-bed"></i> Acomodações:</span></p>
+                            <p>82 acomodações completas distribuídas em três categorias:</p>
+                            <ul class="feature-list">
+                                <li>Executive</li>
+                                <li>Standard</li>
+                                <li>Girassol</li>
+                            </ul>
+                            <p>Clima ameno de montanha com estrutura acolhedora para diferentes perfis de viajantes.</p>
+                        </div>
+
+                        <div class="hotel-info">
+                            <p><span class="hotel-label"><i class="fas fa-info-circle"></i> Destaques:</span></p>
+                            <ul class="feature-list">
+                                <li>Tradição desde 1973</li>
+                                <li>Localização privilegiada no centro da cidade</li>
+                                <li>Experiência gastronômica completa</li>
+                                <li>Espaço familiar com Copa do Bebê</li>
+                                <li>Ideal para viagens de negócios e lazer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://api.whatsapp.com/send?phone=551147126533" class="btn hotel-btn"
+                            target="_blank"><i class="fab fa-whatsapp"></i> Reservar por WhatsApp</a>
+                    </div>
+                </div>
+
                 <!-- Hotel Villa Maior -->
                 <div class="hotel-card">
                     <div class="card-header">
@@ -686,11 +759,13 @@
                         <span class="hotel-type">Hospedagem</span>
                     </div>
                     <div class="card-body">
-                        <p>Oferecendo conforto e comodidade para sua estadia em São Roque, com atendimento 24 horas e diversas cortesias inclusas.</p>
-                        
+                        <p>Oferecendo conforto e comodidade para sua estadia em São Roque, com atendimento 24 horas e
+                            diversas cortesias inclusas.</p>
+
                         <div class="hotel-info">
-                            <p><span class="hotel-label"><i class="fas fa-bed"></i> Tarifas com ar condicionado:</span></p>
-                            
+                            <p><span class="hotel-label"><i class="fas fa-bed"></i> Tarifas com ar condicionado:</span>
+                            </p>
+
                             <h3>Domingo à Quinta-feira</h3>
                             <table class="pricing-table">
                                 <tr>
@@ -719,7 +794,7 @@
                                     <td>1 cama de casal + 2 solteiros</td>
                                 </tr>
                             </table>
-                            
+
                             <h3>Sexta, Sábado e Feriados</h3>
                             <table class="pricing-table">
                                 <tr>
@@ -749,15 +824,16 @@
                                 </tr>
                             </table>
                         </div>
-                        
+
                         <div class="hotel-info">
                             <p><span class="hotel-label"><i class="fas fa-clock"></i> Horários:</span></p>
                             <p><strong>Domingo à Quinta:</strong> Check-in 14h | Check-out 11h</p>
                             <p><strong>Sexta, Sábado e Feriados:</strong> Check-in 16h | Check-out 11h</p>
-                            
-                            <p><span class="hotel-label"><i class="fas fa-coffee"></i> Café da manhã:</span> 6h às 10h</p>
+
+                            <p><span class="hotel-label"><i class="fas fa-coffee"></i> Café da manhã:</span> 6h às 10h
+                            </p>
                         </div>
-                        
+
                         <div class="hotel-info">
                             <p><span class="hotel-label"><i class="fas fa-gift"></i> Cortesias inclusas:</span></p>
                             <ul class="feature-list">
@@ -767,31 +843,39 @@
                                 <li>1 criança até 5 anos cortesia (com documento)</li>
                                 <li>Prédio com gerador de energia, elevador e acessibilidade</li>
                             </ul>
-                            
-                            <p><span class="hotel-label"><i class="fas fa-car"></i> Estacionamento:</span> R$ 10,00/dia (opcional, sujeito à disponibilidade)</p>
+
+                            <p><span class="hotel-label"><i class="fas fa-car"></i> Estacionamento:</span> R$ 10,00/dia
+                                (opcional, sujeito à disponibilidade)</p>
                             <p><span class="hotel-label"><i class="fas fa-paw"></i> Animais:</span> Não permitidos</p>
                         </div>
-                        
+
                         <div class="hotel-info">
-                            <p><span class="hotel-label"><i class="fas fa-info-circle"></i> Informações para reserva:</span></p>
-                            <p>Para confirmar a reserva, é necessário depósito via PIX de 100% do valor da diária e envio do comprovante.</p>
+                            <p><span class="hotel-label"><i class="fas fa-info-circle"></i> Informações para
+                                    reserva:</span></p>
+                            <p>Para confirmar a reserva, é necessário depósito via PIX de 100% do valor da diária e
+                                envio do comprovante.</p>
                             <p><strong>Chave PIX:</strong> 15230273000108 (CNPJ)</p>
-                            <p><strong>Banco:</strong> Santander | <strong>Agência:</strong> 3317 | <strong>Conta:</strong> 13003117-2</p>
-                            <p>Pagamento presencial: dinheiro, cartões de crédito/débito físicos (não aceita virtuais)</p>
+                            <p><strong>Banco:</strong> Santander | <strong>Agência:</strong> 3317 |
+                                <strong>Conta:</strong> 13003117-2</p>
+                            <p>Pagamento presencial: dinheiro, cartões de crédito/débito físicos (não aceita virtuais)
+                            </p>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="https://api.whatsapp.com/send?phone=551147841554" class="btn hotel-btn" target="_blank"><i class="fab fa-whatsapp"></i> Reservar por WhatsApp</a>
+                        <a href="https://api.whatsapp.com/send?phone=551147841554" class="btn hotel-btn"
+                            target="_blank"><i class="fab fa-whatsapp"></i> Reservar por WhatsApp</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58540.98448114616!2d-47.16710036737097!3d-23.529943261847845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03e4747b1c1f%3A0x936aabd68918d272!2sS%C3%A3o%20Roque%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1690832646116!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58540.98448114616!2d-47.16710036737097!3d-23.529943261847845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03e4747b1c1f%3A0x936aabd68918d272!2sS%C3%A3o%20Roque%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1690832646116!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
-    
+
     <footer>
         <p>Guia Gastronômico e de Hospedagem de São Roque - Para uso dos oficiais em visita à cidade</p>
         <p>Informações sobre distâncias aproximadas por rota de carro</p>
@@ -799,21 +883,21 @@
 
     <script>
         // Filtro de categorias
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const restaurantCards = document.querySelectorAll('.restaurant-card');
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
-            
+
             // Filtro de restaurantes
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const filter = button.getAttribute('data-filter');
-                    
+
                     // Atualizar botão ativo
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
+
                     // Filtrar cards
                     restaurantCards.forEach(card => {
                         if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
@@ -824,16 +908,16 @@
                     });
                 });
             });
-            
+
             // Controle de abas
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const tabId = button.getAttribute('data-tab');
-                    
+
                     // Atualizar botão ativo
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
+
                     // Mostrar conteúdo correspondente
                     tabContents.forEach(content => {
                         content.classList.remove('active');
@@ -846,4 +930,5 @@
         });
     </script>
 </body>
+
 </html>
