@@ -2,7 +2,7 @@
 title: Guia Gastronômico - São Roque
 description: Guia gastronômico e de hospedagem para oficiais em São Roque
 baseurl: ""
-url: "https://seuusuario.github.io"
+url: "https://thomasjanoski.github.io"
 theme: minima
 
 # Configurações do Sass
@@ -12,4 +12,5 @@ sass:
 
 # Configurações de build
 source: docs
+
 destination: _site
